@@ -1,0 +1,30 @@
+:- module(startpage , []).
+%
+%  The home page for Cogbot website
+%  discovers what prolog they're running,
+%  and offers them a choice of cogbot's to install
+%
+:- use_module(library(http/html_write)).
+:- use_module(library(http/http_dispatch)).
+:- use_module(layout).
+
+:- http_handler(root(start) , start_page_handler, [id(start)]).
+
+start_page_handler(_Request) :-
+	reply_html_page(
+	    cogbot_web_style,
+	    html([title('Welcome To Cogbot')]),
+	    start_page_content).
+
+start_page_content -->
+	 html([
+	     h2('Welcome To Cogbot'),
+	     \paras([
+'Cogbot is a framework for developing intelligent robots in real and virtual worlds.',
+'While Cogbot is suitable for serious applications in robotics and AI, beginning with Cogbot is fun and easy.',
+'AI researchers looking for a platform that integrates many standard components including embodiment will find Cogbot the best developed offering available.',
+'Software engineers creating presences in virtual worlds will find Cogbot the obvious choice.',
+'Virtual world users will find Cogbot a cool way to make bots even with minimal or no programming experience. Educators will find Cogbot a useful teaching tool. Content creators will find Cogbot useful for automating tasks in shop and studio. Cogbot bots can be NPC\'s in RP Sims. If it needs a bot, it needs Cogbot.'
+		   ])
+       ]).
+

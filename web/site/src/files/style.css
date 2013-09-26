@@ -1,0 +1,51 @@
+@font-face {  
+  font-family: coghead;  
+  src: local("CaviarDreams"),  
+  local("Caviar Dreams"), 
+  local("Walkway"),  
+  url(font/CaviarDreams.ttf);  
+  font-weight: plain;  
+}
+
+h1 {
+    font-family: coghead;
+    font-size: 48pt;
+}
+
+p {
+    font-family: Helvetica, Arial, sans;
+}
+
+body {
+    background-color: #AAA;
+}
+
+#surround {
+    box-shadow: 0.2em 0.2em 0.2em #CCC;
+    border: 1px solid #000;
+    width: 798px;
+    background-image: url("bkgnd.png");
+    background-repeat: no-repeat;
+    margin: 20px 0px 0px 40px;
+}
+
+#content {
+    margin: 170px 58px 16px 149px;
+}
+
+#nav {
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 16px;
+    margin-bottom: 8px;
+    padding: 0px;
+}
+
+#nav  ul {
+    list-style-type: none;
+    font-family: coghead;
+    padding: 0px;
+    margin: 0px;
+}
+

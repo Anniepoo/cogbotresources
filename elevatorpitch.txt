@@ -1,0 +1,26 @@
+[7:30:45 PM] Douglas R. Miles: [19:51] <logicmoo> cyc would not impeed its ability.. only enhance
+[19:52] <logicmoo> the "cogbot" project lets any module be loaded into a framework and visable and useable to cyc
+[19:53] <logicmoo> oh and cyc now runs on mono
+[19:53] <logicmoo> via IKVM (and i mean the server)
+[19:54] <logicmoo> Cyc got opensources by accident - sold to www.larkc.eu
+[19:55] <logicmoo> my branch:  http://larkc.svn.sourceforge.net/viewvc/larkc/branches/LarKC_CommonLisp_Extensions/platform/
+[19:56] <logicmoo> i just say it relaivant to mono due to the fact its vetted (bug workarrounds) to run in IKVM
+[19:57] <logicmoo> my dream is to have people writting real AI sub modules.. compiling to .dll and using the framework host of CYC to lego themselves AI
+[20:00] <logicmoo> the Prolog extension using cli_get, cli_set, cli_call .. etc though is exaclty what it will feel like (good or bad) to leverage that in Cyc's runtime infernce engine
+[20:01] <logicmoo> Cyc is prolog on sterioids.. excpet with all the promises of prolog realized 
+[20:01] <logicmoo> self programming.. everything is data or program.. no differnce etc
+[20:03] <logicmoo> sorry to sound like a cyc commerical but in late 90s i spent two years of my life reverse engineering it and rewriting it to be faster
+[20:03] <logicmoo> and i was always sort of annoyed whenever cycorp let on like it was AI
+[20:04] <logicmoo> since it was like you say sorear.. basicalyl just like a very cool database
+[20:04] <logicmoo> thqt is made to put lego's togehter
+[20:06] <logicmoo>  since everyone is good at fighting over logic "A implies B" whatnot . and there is plenty of learning curve to that .. they never see it as the orignal DROOLS engine
+[20:07] <logicmoo> since they are stuck in the socretes/decartes configuration language
+[20:11] <logicmoo> it safe to assume the roadmap for opencog is on track.. for example.. the embodiement demo.. it worked.. looked good.. but needs to become un-toyified
+[20:12] <logicmoo> just like a 1980s demo of "PAM and SAM" (to me the best AI ever)... 
+[20:14] <logicmoo> this: http://www.it.uu.se/edu/course/homepage/ai/ht10/NatLang/SCHANK.HTM
+[20:17] <logicmoo> if that program can understand Johns plight in that story.. all we have to do is provide that program with it's own issues and instead of asking it why john did something.. instead ask it what john could do differntly.. and ask it to put itself in johns shoes.. then unleash it
+[20:18] <logicmoo> that even though the author disagrees, that *is* real AI, the type even sci-fi authors are always sellingh.. the kind that shoot smoke out of its ears when the world is illogical
+[20:19] <logicmoo> the differnce is it doesnt have to shoot smoke out its ears when the world makes no sense. it just has to try something statically impercise.
+[20:21] <logicmoo> that program (SAM (script apllier mech)) was re-written to PAM = plan applier mech 
+[20:23] <logicmoo> just my opinoin but no greater AI has been invented since.. and CYC is the only database designed to host it
+[20:25] <logicmoo> however, the 6 legged walky-thing can be bolted under it.. and cyc can order its legs to walk it about.. cyc can (and should) be tortured by ill contrived mis-goal associations like "please this person becasue your brain chems say it's time"

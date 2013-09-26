@@ -1,0 +1,144 @@
+:- module(app, [
+	start/0,
+	start_and_wait/0,
+	notice/0
+]).
+
+%
+%  This code after Raivo Laanemet's blog
+%
+
+:- use_module(library(http/thread_httpd)).
+:- use_module(library(http/http_dispatch)).
+:- use_module(library(http/html_write)).
+:- use_module(library(http/http_path)).
+:- use_module(library(http/http_mime_plugin)).
+:- use_module(library(http/http_json)).
+:- use_module(library(http/http_server_files)).
+
+% Todo decide what we're really using here
+:- use_module(src/config).   % config constants
+:- use_module(src/logger).   % the logger, obviously
+:- use_module(src/layout).
+
+/*
+:- use_module(front).
+:- use_module(stat).
+:- use_module(post).
+
+:- use_module(files).
+:- use_module(tags).
+:- use_module(admin).
+:- use_module(comment).
+:- use_module(db).
+*/
+
+:- dynamic started/0.
+
+% http://www.swi-prolog.org/howto/http/HTTPFile.html
+
+% an image is /static/fluffybunny.png, not /static/img/fluffybunny.png
+%
+http:location(files_uri, '/static', []).
+http:location(src_uri, '/src', []).
+http:location(font_uri, root(static), []).
+http:location(style_uri, root(files_uri), []).
+http:location(pages_uri, root(files_uri), []).
+http:location(img_uri, root(files_uri), []).
+http:location(js_uri, root(src_uri), []).
+http:location(fallback_uri, /, [priority(-100)]).
+
+%  Now we make abstract names for the actual file locations
+user:file_search_path(document_root, './files').
+user:file_search_path(src_root, './src').
+user:file_search_path(font, document_root(font)).
+user:file_search_path(css, document_root(style)).
+user:file_search_path(style, document_root(style)).
+user:file_search_path(pages, document_root(pages)).
+user:file_search_path(images, document_root(img)).
+user:file_search_path(js, src_root(js)).
+user:file_search_path(src, src_root).
+
+% static file handlers.  These map the above abstract
+% uri's to abstract directory names. It's all a little abstract
+
+
+% ok, THIS works
+% :- http_handler('/static', serve_files_in_directory(font), [prefix]).
+% now we attempt to remove the ugly /static
+:- http_handler(root(static), serve_files_in_directory(font), [prefix]).
+:- http_handler(style_uri, serve_files_in_directory(style), [prefix]).
+:- http_handler(pages_uri, serve_files_in_directory(font), [prefix]).
+:- http_handler(img_uri, serve_files_in_directory(images), [prefix]).
+:- http_handler(js_uri, serve_files_in_directory(js), [prefix]).
+
+/*
+:- http_handler('/static', serve_files_in_directory('./files/font'), [prefix]).
+:- http_handler('/static', serve_files_in_directory('./files/style'), [prefix]).
+:- http_handler('/static', serve_files_in_directory('./files/pages'), [prefix]).
+:- http_handler('/static', serve_files_in_directory('./files/img'), [prefix]).
+:- http_handler('/static', serve_files_in_directory('./src/js'), [prefix]).
+*/
+
+/* todo - not working
+% handle 404's
+% swi uses the longest handler that matches
+:- http_handler(fallback, http_404([index('/pages/404.html')]),
+                [prefix]).
+*/
+
+% handle the bare domain and requests for index.html
+:- http_handler('/index.html' , view(front:handle_front), []).   % TODO need this
+:- http_handler(root(.) , view(front:handle_front), []).
+
+start:-
+	started, !.
+
+start:-
+	logger(banner, 'Starting Cogbot website\n', []),
+	server_port(Port),
+	http_server(http_dispatch, [port(Port)]),
+	assert(started).
+
+start_and_wait:-
+	start,
+	thread_get_message(_).
+
+notice:-
+	writeln('NOTICE:'),
+	writeln('To start the server, type: start.'),
+	writeln('To reload changed code files, type: make.'),
+	site_title(Title),
+	server_port(Port),
+	db_file(DbFile),
+	admin_passwd(ApFile),
+	format('Blog title: ~w~n', [Title]),
+	format('Server port: ~w~n', [Port]),
+	format('Database file: ~w~n', [DbFile]),
+	format('Administrator password file: ~w~n', [ApFile]).
+
+view(Callback, Request):-
+	debug(app, 'Calling ~w~n', [Callback]),
+	call(Callback, Response, Request),
+	reply_view(Response, Request).
+
+reply_view(html(Title, ContentRule), _):-
+        !,
+	phrase(html_layout(Title, ContentRule), Html),
+	format('Content-type: text/html~n~n'),
+	print_html(Html).
+
+reply_view(html(ContentRule), _):-
+	!,
+	phrase(ContentRule, Html),
+	format('Content-type: text/html~n~n'),
+	print_html(Html).
+
+reply_view(redirect(Path), Request):-
+	!,
+	http_redirect(see_other, Path, Request).
+
+reply_view(json(Json), _):-
+	!,
+	reply_json(Json).
+

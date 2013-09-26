@@ -1,0 +1,79 @@
+TODO
+======================
+add avro component
+
+find IKVM license, show in core.
+
+
+IRC client - code in core, but this
+configures IRC bot
+ irc server
+chanell to join
+ircnickname
+ checkbox relay chat for sim
+
+make better Objects picture
+
+============
+
+We need another Cyc component that just configs us to query cyc
+
+Cyc Query
+Cyc World
+
+aiml personality -
+ copies chomsky 
+
+(cogbot-aiml.zip)
+
+
+
+
+cogbot-wordnet.zip  (doesn't exist yet)
+
+
+OpenCyc Client - big config job
+needs a URI of a CycServer:   
+push world data to cyc
+clear cyc data between sessions
+
+
+IRC client - code in core, but this
+configures IRC bot
+ irc server
+chanell to join
+ircnickname
+ checkbox relay chat for sim
+
+
+CL interface -
+
+at the moment it always installs anyway.
+but leave it for pedagogic value.
+
+if checked, it includes the tab window in
+Radegast.
+
+
+The sims -
+  not ready, remove
+
+
+Sources - 
+preflight SVN
+put it last, below Everything, have sources not load in everything
+
+
+
+
+add avro component
+
+AvRO  
+Is a JMX 
+
+Use Qpid to transmit AVRO messages 
+which are high and low level events 
+
+allows users to write plugins that use messaging.
+
+

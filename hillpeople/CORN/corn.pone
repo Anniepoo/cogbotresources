@@ -1,0 +1,65 @@
+
+// overall scheme to make corn in the granery
+to make granery_corn
+    clear_field
+    plant_corn
+    let_corn_grow
+    harvest_corn
+    process_corn
+    you will have granery_corn
+    you will be tired
+
+// describe the nature of granery_corn
+// 
+granery_corn is stuff
+    stored in granery
+    
+granery is a unique container
+    granery stores 100 dried_corn
+
+// carryable is a hardcoded subclass of object
+your hoe is a unique carryable
+
+// there's a cost to leaving a hoe out
+failure 10
+    night
+    hoe not at a hut
+    
+hut is a multiple thing
+    
+your planting_stick is a unique carryable
+failure 3
+    night
+    planting_stick not at your home
+
+to clear_field
+    carry your hoe
+    have no rain
+    have no snow
+    be at corn_field
+    see corn_stalks
+    touch your hoe
+    hear field_cleared(_)
+    you will have clear_field
+    you will not have corn_stalks
+    
+to plant_corn
+    carry your planting_stick
+    have no rain
+    have no snow
+    be at corn_field
+    see cleared_field
+    touch your planting_stick
+    hear planted(_)
+    you will have growing_corn
+    you will not have cleared_field
+    
+to let_corn_grow
+    duration 60 days
+    see no snow
+    see rain > 14 days
+    see rain < 30 days
+    see no month is december
+    
+
+    

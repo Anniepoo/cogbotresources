@@ -1,0 +1,64 @@
+Anglobot
+
+1. Purpose of this?
+1) To implement a productive development environment for plan definitions for virtual world bot plans for less technical Subject MAtter Experts.
+Attracting a community of users will prevent the 'toy problem' problem in our AI research. With real users using the system to create bots in the virtual world. Promote the sharing of user generated content.
+
+2) Implement a BDI planner that is capable of processing the content produced by the comunity. #1 challenges the competency of #2 and allows us to learn the the nuances of the optimization problem around compiling that info. How to do that is an open question in AI.
+
+3) To make the system practicable for real users it needs a rudimentary controlled dialog system.
+
+4) To make the system practicable for real users it needs support for common actions (eg. carryable objects, moving along paths) without forcing the user to explain the details each time.
+
+
+5) 1 thru 4 allows us to ....
+test mapping the domain files to a controlled dialog system
+
+this dialog system is the fundimental langauge of the internal dialog that a single agent thinks in expressed in PAM and SAM software from 1977
+(aka 'Schanks hypothesis') from the book "Script, Plans and goals"
+
+Our ultimate 
+
+our purpose is not to make them converse
+our purpose is not to build the world
+
+2. Overall objective
+
+
+3. Example scenarios
+3a) interactive teaching aid in 18th century london teaching about 18th century eating technique. 
+
+note - way to have shared pone libs
+
+3) To allow simulations to be set up in a turn key environment with interactive teaching aid centric to one on one interaction with agents
+
+4) the plan definations and lesson plans defining should be in the same language
+
+
+
+=============
+
+We can do the example scenarios.
+
+
+To have a LF conversation with robot that results in demonstration of the robot predicting user mental model and using a prescribed behavour.  Each step produced in that process should be able to be read homeocentrically (in the terms of the robot using self in the LF)
+Douglas R. Miles: (commitsGreeting Bot1 Annie1)
+That output of those steps when converted with phases will constitute what we currently belive in pyschology to be what the mind's ear is hearing that is proof that AGI has been acheived.
+
+LF = logicform
+
+
+
+============
+
+
+
+Cannot complete the install because one or more required items could not be found.
+  Software being installed: Jasonide_feature 1.0.6.201204171351 (jasonide_feature.feature.group 1.0.6.201204171351)
+  Missing requirement: jasonide.xtext.asl 1.0.6 (jasonide.xtext.asl 1.0.6) requires 'package org.eclipse.xtext.xtend2.lib 0.0.0' but it could not be found
+  Cannot satisfy dependency:
+    From: Jasonide_feature 1.0.6.201204171351 (jasonide_feature.feature.group 1.0.6.201204171351)
+
+inspect the system on a really deep level
+
+

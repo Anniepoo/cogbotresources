@@ -1,0 +1,139 @@
+
+
+/* pone is declarative. It describes the world.
+The pone interpreter 
+
+ pone files describe:
+ 
+ * facts about how the world works.
+   e.g. the hut is scenery.
+   Pone already knows many things about the world.
+   Additionally, pone depends on many simplifications inherent to working in a virtual world.
+   For example, in real life wearing something is a complicated action (ask anyone who'se taught
+   a child to dress him/herself)  In the virtual world it's an atomic action.
+   
+ * useful plans for doing things
+   to make tea 
+       heat water,
+       put water in glass,
+       put tea leaves in mesh container,
+       after 3 minutes you will have tea with 
+       take mesh container out of water
+       
+    One useful 'plan' is a plan that asserts that something is beyond one's control
+    to make night
+       impossible.
+    
+ * Judgements about the value of doing things, and predictions of the value of doing things
+   Ultimately all values relate to 'utility'
+    dead has utility -100000
+    friendly av dead has utility -10000   // better him than me
+    
+    dying is really really awful.
+    boredom
+    
+    
+ * A model of the bot's status.
+    bot has calories which varies from 
+    pregnant bot has morning_sickness
+    
+G = Goal
+S = State
+A = Act
+
+A enables S
+A disables S
+A disables A
+S disables S
+S implies S
+S implies G needed
+S implies G met
+
+
+// overall scheme to make corn in the granery
+// this is a scheme - a pre-made piece of a plan
+// we don't (usually) need to specify the 
+// preconditions because putting this in the code
+// asserts that it's an effective plan, not an action
+// in a PDDL planner.
+
+
+Every bot has 
+prop calories [
+    bot
+    
+is a bot_state that starts at 5.
+
+
+
+// die of starvation
+failure   10000
+    calories < 0
+    
+to increase calories 
+   
+
+to make fresh_corn
+    have a clear_field
+    plant_corn
+    let_corn_grow
+    harvest_corn
+    you will have some fresh_corn
+    process_corn
+    you will have some granery_corn
+    you will be tired
+
+// describe the nature of granery_corn
+// 
+granery_corn is stuff
+    stored in granery
+    
+granery is a unique container
+    granery stores 100 dried_corn
+
+// carryable is a hardcoded subclass of object
+your hoe is a unique carryable
+
+// there's a cost to leaving a hoe out
+failure 10
+    night
+    hoe not at a hut
+    
+hut is a multiple thing
+    
+your planting_stick is a unique carryable
+failure 3
+    night
+    planting_stick not at your home
+
+to clear_field
+    carry your hoe
+    have no rain
+    have no snow
+    be at corn_field
+    see corn_stalks
+    touch your hoe
+    hear field_cleared(_)
+    you will have clear_field
+    you will not have corn_stalks
+    
+to plant_corn
+    carry your planting_stick
+    have no rain
+    have no snow
+    be at corn_field
+    see cleared_field
+    touch your planting_stick
+    hear planted(_)
+    you will have growing_corn
+    you will not have cleared_field
+    
+to let_corn_grow
+    duration 60 days
+    see no snow
+    see rain > 14 days
+    see rain < 30 days
+    see no month is december
+    
+
+    

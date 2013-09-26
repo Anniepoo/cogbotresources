@@ -1,0 +1,23 @@
+The official cogbot font should be a free font similar to Century Gothic
+
+Walkway is good.  if we can do @font-face it'll work
+
+
+
+this off stackoverflow:
+
+Or you can go the @font-face path but use a free font. These are all free and look like Century Gothic:
+
+Nevis
+
+PT Sans
+
+Walkway (family)
+
+Caviar Dreams
+
+Cicle (family)
+
+Kozuka Gothic Pro L (Kozuka is a family)
+
+You can find them in dafont.com, fontsquirrel.com, and other similar sites.

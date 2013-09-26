@@ -1,0 +1,428 @@
+[7/7/2012 9:40:26 PM] *** Douglas R. Miles added aindilis ***
+[7/7/2012 9:41:38 PM] Douglas R. Miles: [Wednesday, July 04, 2012 6:33 PM] Anne Ogborn: 
+
+<<< look at debug in the swipl docs.  TCO's only disabled in debug mode
+[7/7/2012 9:42:08 PM] Douglas R. Miles: ah so i gues one should not expect TCO to operate except on release software
+[7/7/2012 9:42:14 PM] Anne Ogborn: hey Andrew?
+[7/7/2012 9:42:21 PM] Douglas R. Miles: not durring development
+[7/7/2012 9:42:32 PM] Anne Ogborn: no, Doug, it's only when you're in debug mode
+[7/7/2012 9:43:11 PM] Douglas R. Miles: ah we better start staying out of debug mode!
+[7/7/2012 9:43:47 PM] Douglas R. Miles: sorry .. am not trying to argue or be cute.. thank you for clarifying
+[7/7/2012 9:43:58 PM] Anne Ogborn: 8cD
+[7/7/2012 9:44:13 PM] Anne Ogborn: anyway, Andrew, you on this thing?
+[7/7/2012 9:44:51 PM | Edited 9:45:16 PM] Douglas R. Miles: he is, just might be AFK at the moment.. but feel like it's friuitful (cant hurt)  to have us 4 important people arround for any discussions
+[7/7/2012 9:45:12 PM] Anne Ogborn: sure
+[7/7/2012 9:45:33 PM] Anne Ogborn: whoo, we're important people
+[7/7/2012 9:46:06 PM] Anne Ogborn: we're slaves to a scary chunko code
+[7/7/2012 9:53:05 PM] Anne Ogborn: I'm going afk 1 min for bathroom
+[7/7/2012 9:56:43 PM] Anne Ogborn: back
+[7/7/2012 10:02:38 PM] Anne Ogborn: ??
+[7/7/2012 10:06:48 PM] Anne Ogborn: anybody there?
+[7/7/2012 10:12:16 PM] Anne Ogborn: flaming onions of death!
+[7/7/2012 11:25:46 PM] Douglas R. Miles: http://scom.hud.ac.uk/planform/gipo/docs/predicate.html
+[7/7/2012 11:49:08 PM] Douglas R. Miles: Andrew, do you have an example file of "Life Planning"?
+[7:52:26 AM] aindilis: http://frdcsa.org/~andrewdo/WebWiki/FreeLifePlanningCoachSoftware.html
+[10:12:11 AM] Anne Ogborn: hey
+[10:12:13 AM] Anne Ogborn: 8cD
+[10:12:44 AM] Anne Ogborn: Andrew, you on?
+[10:35:07 AM] Andrew Dougherty: howdy
+[10:35:38 AM] Anne Ogborn: hey
+[10:35:47 AM] Anne Ogborn: loking at yer stuff
+[10:36:05 AM] Andrew Dougherty: same here
+[10:36:23 AM] Anne Ogborn: did Douglas give you my 'pone' file?
+[10:36:31 AM] Andrew Dougherty: what's that?
+[10:36:49 AM] *** Anne Ogborn sent corn.pone corn.pone corn.pone ***
+[10:37:09 AM] Anne Ogborn: the history of this, from my POV
+[10:37:41 AM] Anne Ogborn: is that I was tasked with making a 'big example' for Cogbot to demo it's capabilities
+[10:38:02 AM] Andrew Dougherty: ah yeah I can't seem to download that file (screwy linux skype)
+[10:38:09 AM] Anne Ogborn: I made a set of 6 tribal people, and a little world they live in
+[10:38:14 AM] Anne Ogborn: email?
+[10:38:24 AM] Andrew Dougherty: adougher9@gmail.com
+[10:38:25 AM] Anne Ogborn: are you one the common dropbox?
+[10:38:32 AM] Andrew Dougherty: no
+[10:38:44 AM] Anne Ogborn: ask Douglas about it
+[10:38:47 AM] Andrew Dougherty: k
+[10:39:42 AM] Anne Ogborn: look at corn.pone
+[10:40:06 AM] Anne Ogborn: pone2  is just my further musings
+[10:40:26 AM] Anne Ogborn: Do you have a VW viewer?
+[10:41:08 AM] Andrew Dougherty: no
+[10:41:24 AM] Andrew Dougherty: link
+[10:41:30 AM] Andrew Dougherty: win 7 or linux?
+[10:41:31 AM] Anne Ogborn: you know Cogbot's purpose is to run a bot in a virtual world?
+[10:41:34 AM] Anne Ogborn: linux is fine
+[10:41:44 AM] Anne Ogborn: suggest you get firestorm
+[10:41:52 AM] Andrew Dougherty: I've been operating in parallel with opencog
+[10:42:07 AM] Andrew Dougherty: but not actually with it so much
+[10:42:18 AM] Anne Ogborn:  -loginuri http://www.pathwayslms.com:9000/
+[10:42:18 AM] Andrew Dougherty: k
+[10:42:22 AM] Anne Ogborn: ok
+[10:42:57 AM] Andrew Dougherty: I'm going to switch over to my windows/linuxvm pc which is quite a bit faster than this one
+[10:43:04 AM] Andrew Dougherty: one sec please
+[10:43:20 AM] Anne Ogborn: http://www.phoenixviewer.com/downloads.php
+[10:43:24 AM] Anne Ogborn: kk
+[10:43:36 AM] Anne Ogborn: that's firestorm, it'll work for linux
+[10:43:45 AM] Andrew Dougherty: well I don't have 3d on linux
+[10:43:49 AM] Anne Ogborn: add the above to your launch
+[10:43:52 AM] Andrew Dougherty: k
+[10:44:05 AM] Anne Ogborn: you're on a low power machine?
+[10:44:06 AM] Anne Ogborn: ok
+[10:44:14 AM] Anne Ogborn: well, lets not get distracted by it
+[10:44:17 AM] Andrew Dougherty: well I have several, just haven't upgrade my main AI machine
+[10:44:17 AM] Andrew Dougherty: k
+[10:44:49 AM] Anne Ogborn: anyway, in a private opensim instance we have this 'hillpeople' example
+[10:45:01 AM] Anne Ogborn: it runs some 'tribal' people around
+[10:45:12 AM] Anne Ogborn: initially it was going to just be a demo for Cogbot
+[10:45:39 AM] Anne Ogborn: but Douglas and I decided it'd also be a good environment to play with his ideas about AI
+[10:46:32 AM] Anne Ogborn: so we decided it'd be worth it to try to develop a really good language/IDE for developing these sorts of virtual worlds populated by bots
+[10:46:36 AM] Andrew Dougherty: check out http://www.meneguzzi.eu/felipe/software.shtml Peleus
+[10:47:15 AM] Andrew Dougherty: excellent
+[10:47:44 AM] Anne Ogborn: my thesis in this is that whatever system the 'botmaster' is working in, they have a lot of work to do
+[10:48:24 AM] Anne Ogborn: so we want to create a system that is as productive for them as possible
+[10:48:38 AM] Anne Ogborn: and raw STRIPS PDDL didn't come close to cutting it
+[10:49:02 AM] Andrew Dougherty: k
+[10:49:15 AM] Anne Ogborn: at the moment the bots just get themselves set up (eg they get dressed in a fixed list of stuff), then wander around, and you can tell them to go rest
+[10:49:36 AM] Anne Ogborn: and yet, my forward chaining raw prolog implementation's about at it's limits
+[10:50:21 AM] Anne Ogborn: so, our roadmap going forward is that we're going to spend to roughly mid sept. getting cogbot in 0.1a  'ship' state
+[10:50:27 AM] Anne Ogborn: ready for external users
+[10:50:54 AM] Anne Ogborn: then I'll spend the next year or so working on this dev system for these worlds
+[10:51:47 AM] Andrew Dougherty: cool, where should I start, how can I help?
+[10:51:49 AM] Anne Ogborn: the file I sent is my first attempt to write a program for this non existing system
+[10:52:13 AM] Andrew Dougherty: probably best to get everything set up on a machine, right?
+[10:52:26 AM] Anne Ogborn: you should probably get all of cogbot dev set up
+[10:52:37 AM] Anne Ogborn: we're sort of wedded to windows
+[10:52:55 AM] Anne Ogborn: because the VW stuf is all C# centric
+[10:52:57 AM] Andrew Dougherty: okay I'll use my windows machien no worries, good thing I just got that set up
+[10:53:03 AM] Anne Ogborn: cool
+[10:53:06 AM] Andrew Dougherty: but I will try to port it to linux
+[10:53:08 AM] Andrew Dougherty: mono etc
+[10:53:18 AM] Andrew Dougherty: if that's alright
+[10:53:39 AM] Anne Ogborn: Douglas just got it running on mono, but you can't develop there, just because everything's VS2010 centric
+[10:53:52 AM] Andrew Dougherty: okay
+[10:54:31 AM] Anne Ogborn: though there's a page in wiki  to build on linux
+[10:54:43 AM] Andrew Dougherty: k
+[10:54:55 AM] Andrew Dougherty: brb
+[10:55:15 AM] Anne Ogborn: http://code.google.com/p/opensim4opencog/wiki/BuildingCogbot
+[10:55:23 AM] Anne Ogborn: that's the windows build instructions
+[10:55:36 AM] Anne Ogborn: http://code.google.com/p/opensim4opencog/wiki/CheckoutAndBuildAndRunOnLinux
+[10:55:39 AM] Anne Ogborn: that's linux
+[10:55:54 AM] Anne Ogborn: (YMMV, we're really mostly on winders here)
+[10:57:09 AM] Anne Ogborn: you'll also need a viewer (firestorm, above, works. I use the 'stock' second life viewer, from www.secondlife.com
+[10:57:51 AM] Anne Ogborn: (don't use phoenix, it doesn't support media on a prim, and we use that sometimes)
+[10:58:33 AM] Andrew Dougherty: k trying to switch over to windows skype
+[10:58:34 AM] Anne Ogborn: when you come back I want to make you a user on pathways
+[10:58:38 AM] Anne Ogborn: ok
+[10:58:47 AM] Andrew Dougherty: a little pause switching from vga to hdmi
+[10:58:53 AM] Anne Ogborn: give me a pw so I can create user while your doing it
+[10:59:07 AM] Andrew Dougherty: MidpapOog4
+[10:59:36 AM] Andrew Dougherty: can you try kicking me and inviting me again?
+[11:00:16 AM] Anne Ogborn: sure
+[11:00:19 AM] Andrew Dougherty: ty
+[11:00:41 AM] Anne Ogborn: actually, I don't have you as contact
+[11:00:55 AM] Anne Ogborn: we;er on the persistant group chat
+[11:01:22 AM] Anne Ogborn: answer that contact request
+[11:01:51 AM] Andrew Dougherty: yeah not seeing anything on my linux client, will switch to windows, one sec, can't see this window from there
+[11:02:01 AM] Anne Ogborn: ok
+[11:02:25 AM] Andrew Dougherty: got it, cool
+[11:02:38 AM] Anne Ogborn: ok, need me to do anything else on skype here?
+[11:02:49 AM] Andrew Dougherty: no I should be good, saved the group[
+[11:02:54 AM] Anne Ogborn: cool
+[11:02:56 AM] Andrew Dougherty: now I'll just try to get everything set up
+[11:03:01 AM] Anne Ogborn: ok
+[11:03:36 AM] Anne Ogborn: your username on the pathways opensim is Andrew Dougherty
+[11:03:41 AM] Andrew Dougherty: thanks
+[11:03:56 AM] Anne Ogborn: I'll make you an acct on the box as well
+[11:07:57 AM] Anne Ogborn: you there?
+[11:08:15 AM] Andrew Dougherty: yeah
+[11:08:27 AM] Anne Ogborn: you now have a sudoers acct on pathwayslms.com
+[11:08:30 AM] Anne Ogborn: andrew
+[11:08:32 AM] Anne Ogborn: and your pw
+[11:08:36 AM] Andrew Dougherty: ty
+[11:08:40 AM] Anne Ogborn: and an account
+[11:08:51 AM] Anne Ogborn: Andrew Dougherty
+[11:09:02 AM] Anne Ogborn: on the opensim instance bound to 9000 on that box
+[11:09:24 AM] Andrew Dougherty: great I'll try to get this all set up in a few mins here
+[11:09:29 AM] Andrew Dougherty: I mean will take a few mins
+[11:10:15 AM] Anne Ogborn: don't do anything too massive to the linux setup on that box without checking with me, don't bring down PHP based services (this is a production box for Pathways, an in world teaching system I sell)
+[11:10:31 AM] Anne Ogborn: oh, and don't kill the quizwhiz
+[11:10:36 AM] Andrew Dougherty: k
+[11:10:39 AM] Anne Ogborn: (UH facility I host)
+[11:11:03 AM] Anne Ogborn: ok, fix yer skype
+[11:11:14 AM] Andrew Dougherty: I think skype is fine
+[11:11:23 AM] Andrew Dougherty: gonna get all this opensim stuff going
+[11:11:45 AM] Andrew Dougherty: I'm downloading the svn to my linux vm because I didn't see whether to use that on Win 7 or not
+[11:15:24 AM] Anne Ogborn: cool
+[11:15:38 AM] Anne Ogborn: which svn?
+[11:15:48 AM] Anne Ogborn: you don't need a local opensim install
+[11:15:55 AM] Andrew Dougherty: http://www.pathwayslms.com:9000/
+[11:15:57 AM] Andrew Dougherty: srry
+[11:16:06 AM] Andrew Dougherty: opensim4opencog.googlecode
+[11:16:13 AM] Anne Ogborn: ah - that's cogbot
+[11:16:20 AM] Anne Ogborn: yup, you'll need cogbot
+[11:16:43 AM] Anne Ogborn: but it's far saner to dl that to winders
+[11:16:51 AM] Andrew Dougherty: I will scp it over
+[11:16:54 AM] Anne Ogborn: ok
+[11:17:03 AM] Andrew Dougherty: what's the default svn prog for windows
+[11:17:06 AM] Andrew Dougherty: I'm mainly a linux guy
+[11:17:22 AM] Anne Ogborn: most of us use Tortoise
+[11:17:42 AM] Anne Ogborn: it's a friendly GUI client - adds little badges that show the state of files
+[11:17:52 AM] Anne Ogborn: one of the few times GUI's actually make sense
+[11:19:17 AM] Anne Ogborn: well, this started as a conversation about what we'd been doing
+[11:19:58 AM] Anne Ogborn: tell me about what you've been doing that's brought you to project
+[11:20:00 AM] Anne Ogborn: 8cD
+[11:20:57 AM] Andrew Dougherty: well I've been working on AI for a while, trying to build software to help people witht their lives, kind of like a guardian angel.  I'm interested in argumentation based practical reasoning, and building agents that are less reactive and more deliberative.
+[11:21:18 AM] Andrew Dougherty: I've known Douglas through his work with OpenCyc
+[11:21:23 AM] Anne Ogborn: I see!
+[11:21:33 AM] Anne Ogborn: I'm actually NOT an AI person
+[11:21:54 AM] Anne Ogborn: I'm a graphics engineer, I got interested in virtual worlds, now my day job's in virtual worlds
+[11:21:54 AM] Andrew Dougherty: well I googled you, you run a VW setup in is it Texas?
+[11:21:58 AM] Anne Ogborn: yes
+[11:22:06 AM] Anne Ogborn: Univ. of Houston
+[11:22:09 AM] Andrew Dougherty: nice
+[11:22:35 AM] Andrew Dougherty: is this for your day job?
+[11:22:40 AM] Anne Ogborn: cogbot?
+[11:22:47 AM] Anne Ogborn: no, cogbot's hackerishness
+[11:22:49 AM] Andrew Dougherty: um, 8cd?
+[11:22:59 AM] Andrew Dougherty: k
+[11:23:14 AM] Anne Ogborn: you're sticking your tongue at me?
+[11:23:22 AM] Andrew Dougherty: oh is that what that means?
+[11:23:23 AM] Andrew Dougherty: srry
+[11:23:30 AM] Andrew Dougherty: I thought it was the project name lol
+[11:23:32 AM] Anne Ogborn: oh!  8cD  <-- my usualy smiley
+[11:23:41 AM] Andrew Dougherty: k
+[11:24:11 AM] Anne Ogborn: no, the project's "the virtual worlds in education project of the university of houston department of health and human performance"
+[11:24:21 AM] Anne Ogborn: so I usually say HHP
+[11:25:01 AM] Andrew Dougherty: well I'm super excited to be helping out
+[11:25:09 AM] Anne Ogborn: Neat!
+[11:25:23 AM] Anne Ogborn: 8cD  It's more fun than being poked with a stick!
+[11:25:41 AM] Andrew Dougherty: my availability is going to be outside of 11-7 weekdays and during weekends
+[11:26:01 AM] Anne Ogborn: and to boot, we're promising everybody on the team freedom from mind control when the robot overlords take over!
+[11:26:22 AM] Andrew Dougherty: hehe.  and I may have some junior developers that I will try to get up to speed.
+[11:26:28 AM] Anne Ogborn: cool!
+[11:26:36 AM] Andrew Dougherty: one of them is doing a game development project and I'm trying to steer him in this direciton
+[11:27:09 AM] Anne Ogborn: I'm sort of doing the project manager stuff - bugging Doug and Kino about stuff like testing, keeping on roadmap, etc.
+[11:27:21 AM] Andrew Dougherty: do we scrum at all?
+[11:27:46 AM] Anne Ogborn: and I've done a lot of peripheral stuff like the installer and testing framework
+[11:27:54 AM] Anne Ogborn: well, not exactly
+[11:28:12 AM] Anne Ogborn: it's more that Kino does whatever he does, he's more in the Hansen robotics orbit
+[11:28:36 AM] Anne Ogborn: but Douglas and I pretty much scrum
+[11:28:43 AM] Anne Ogborn: no formal meetings or anything
+[11:28:44 AM] Andrew Dougherty: Neat!
+[11:29:16 AM] Anne Ogborn: but we set out 'ok, for next few days I'l make X'  type stuff
+[11:29:21 AM] Anne Ogborn: there's a roadmap in the wiki
+[11:29:31 AM] Anne Ogborn: we're good about posting issues
+[11:29:59 AM] Anne Ogborn: when I came on I got them to start populating the wiki
+[11:30:09 AM] Anne Ogborn: and documenting stuff
+[11:30:40 AM] Andrew Dougherty: srry 11 - 7 CST
+[11:30:47 AM] Anne Ogborn: ah, cool
+[11:31:17 AM] Anne Ogborn: well, right now I'm working a short gig to make extra money
+[11:31:24 AM] Anne Ogborn: so I'm a bit socked in
+[11:32:19 AM] Anne Ogborn: but that was supposed to have ended friday - it's not over, so I gotta figure out how to not shaft anybody in the process.
+[11:33:25 AM] Andrew Dougherty: yeah
+[11:33:54 AM] Anne Ogborn: you'll need swi-prolog on yer winders machine, obviously
+[11:34:01 AM] Anne Ogborn: and VS2010
+[11:34:14 AM] Andrew Dougherty: do they sell that still?
+[11:34:25 AM] Anne Ogborn: I think it's latest
+[11:34:28 AM] Andrew Dougherty: k
+[11:34:55 AM] Anne Ogborn: is yer svn done?
+[11:35:16 AM] Andrew Dougherty: I just finally got it going, I didn't see a request permissions window
+[11:35:25 AM] Anne Ogborn: kk
+[11:35:27 AM] Andrew Dougherty: not used to windows, srry if I'm a tad slow
+[11:35:36 AM] Andrew Dougherty: I'll pick up
+[11:35:39 AM] Andrew Dougherty: I'm using it for work now
+[11:35:43 AM] Anne Ogborn: np!
+[11:36:16 AM] Anne Ogborn: I'm totally stuck to windows sadly. All the VW stuff is windows centric.
+[11:36:29 AM] Andrew Dougherty: stable dev or git release of swi-prolog?
+[11:36:38 AM] Anne Ogborn: stable
+[11:36:51 AM] Andrew Dougherty: 64 bit okay?
+[11:36:57 AM] Anne Ogborn: yes
+[11:37:01 AM] Anne Ogborn: def. use 64 bit
+[11:37:06 AM] Anne Ogborn: you don't want 32
+[11:37:13 AM] Anne Ogborn: I'm on 6.1.6
+[11:38:29 AM] Anne Ogborn: I think Douglas wanted to mux us together and heat cause the stuff I'm doing and your AI itnerests are intertwined
+[11:38:39 AM] Anne Ogborn: s/mux/mix/
+[11:38:44 AM] Andrew Dougherty: definitely
+[11:38:51 AM] Anne Ogborn: (well, mux is probably right as well)  8cD
+[11:39:28 AM] Anne Ogborn: the pone file I define three things
+[11:40:21 AM] Anne Ogborn: snippets of plans, in some language that does a lot to help you avoid saying the obvious preconditions
+[11:40:53 AM] Anne Ogborn: and ontology to help the language 'do the obvious'
+[11:41:40 AM | Edited 11:41:45 AM] Anne Ogborn: eg you can say a rake is carryable, and it understands if you carry the rake it moves with you
+[11:42:16 AM] Andrew Dougherty: yeah
+[11:42:21 AM] Andrew Dougherty: so the svn is down
+[11:42:25 AM] Anne Ogborn: and definitions of utility - 'dying is very very bad.'
+[11:42:25 AM] Andrew Dougherty: I'll go through the buildingcogbot now
+[11:42:31 AM] Andrew Dougherty: nice
+[11:42:33 AM] Anne Ogborn: kk
+[11:42:44 AM] Anne Ogborn: there's some manual steps, follow the wiki page
+[11:42:49 AM] Andrew Dougherty: okay
+[11:42:56 AM] Anne Ogborn: http://code.google.com/p/opensim4opencog/wiki/BuildingCogbot
+[11:43:35 AM] Anne Ogborn: getting water while u start build, then we can talk
+[11:43:50 AM] Andrew Dougherty: k
+[11:44:34 AM] Anne Ogborn: back
+[11:44:34 AM] Andrew Dougherty: where should I place the root cogbot directory?  not familiar with common windows paths
+[11:44:46 AM] Anne Ogborn: mines' in c:\development
+[11:44:48 AM] Andrew Dougherty: k
+[11:48:17 AM] Anne Ogborn: if you get the build started, let me know, then we can chat
+[11:48:51 AM] Andrew Dougherty: k I'll ping you when I get stuck or finished
+[11:49:23 AM] Anne Ogborn: kk
+[11:55:12 AM] Andrew Dougherty: yeah I'm not finding swicli
+[11:55:35 AM] Andrew Dougherty: I installed 6.1.8 which was the closest I could find to 6.1.6
+[11:55:36 AM] Anne Ogborn: in the project, it's all the way at bottom
+[11:55:40 AM] Anne Ogborn: ok
+[11:55:44 AM] Anne Ogborn: that should be fine
+[11:55:47 AM] Anne Ogborn: hang on
+[11:55:49 AM] Andrew Dougherty: when I did an install I got a couple errors
+[11:56:06 AM] Anne Ogborn: what errors?
+[11:56:11 AM] Anne Ogborn: and what were you installing
+[11:56:13 AM] Anne Ogborn: ?
+[11:56:25 AM] Andrew Dougherty: when I ran the runprebuild.bat.
+[11:56:30 AM] Anne Ogborn: hmm
+[11:56:40 AM] Anne Ogborn: can u paste the errors?
+[11:56:41 AM] Andrew Dougherty: files not being found etc
+[11:56:46 AM] Andrew Dougherty: no I couldn't paste them
+[11:56:55 AM] Andrew Dougherty: I'll rerun the script, it should be able to be rerun right?
+[11:56:59 AM] Anne Ogborn: yes
+[11:57:08 AM] Anne Ogborn: you can right click on drag bar in cmd window
+[11:57:16 AM] Anne Ogborn: and choose 'mark
+[11:57:20 AM] Andrew Dougherty: k
+[11:57:29 AM] Anne Ogborn: then mark a block, hit enter to copy
+[11:58:10 AM] Andrew Dougherty: C:\development\opensim4opencog\sources\external\Radegast\openmetaverse_data\stat
+ic_assets\ff201a24-6893-4c41-77f2-bf707481e585 -> C:\development\opensim4opencog
+\bin\openmetaverse_data\static_assets\ff201a24-6893-4c41-77f2-bf707481e585
+351 File(s) copied
+
+C:\development\opensim4opencog>move XML.dll XML.dll.XGLoreWindowsOnly
+The system cannot find the file specified.
+
+C:\development\opensim4opencog>move GraphvizDot.dll GraphvizDot.dll.XGLoreWindow
+sOnly
+The system cannot find the file specified.
+
+C:\development\opensim4opencog>xcopy /f /y /c sources\chatbot\LAIR.ResourceAPIs\
+PennBank\TreeBankGrapher\bin\Release\LAIR.Misc.dll bin\
+C:\development\opensim4opencog\sources\chatbot\LAIR.ResourceAPIs\PennBank\TreeBa
+nkGrapher\bin\Release\LAIR.Misc.dll -> C:\development\opensim4opencog\bin\LAIR.M
+isc.dll
+1 File(s) copied
+
+C:\development\opensim4opencog>xcopy /f /y /c /e bin-chatbot\*.* bin\
+File not found - *.*
+0 File(s) copied
+
+C:\development\opensim4opencog>bin\Prebuild.exe  prebuild.xml /target vs2008
+[11:58:25 AM] Anne Ogborn: oh, yes
+[11:58:49 AM] Anne Ogborn: first two are OK
+[11:59:04 AM] Anne Ogborn: but you need to first run include-chatbot.bat
+[11:59:09 AM] Anne Ogborn: then run prebuild
+[11:59:18 AM] Anne Ogborn: sorry - welcome to pre alpha development
+[11:59:31 AM] Anne Ogborn: right now only the chatbot including version's working
+[11:59:42 AM] Anne Ogborn: so run include-chatbot.bat
+[11:59:49 AM] Anne Ogborn: then run prebuild againt
+[12:00:02 PM] Andrew Dougherty: C:\Users\Andrew>cd c:\development\opensim4opencog
+
+c:\development\opensim4opencog>include-chatbot.bat
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/data-chatbot/alicebot/aiml bin/aiml/
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/data-chatbot/alicebot/config bin/config/
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/data-chatbot/wordnet30 bin/wordnet30/
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/trunk-chatbot/bin-chatbot bin-chatbot/
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/trunk-logicmoo/prolog/programk bin/prolog/programk
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/trunk-logicmoo/prolog/startrek bin/prolog/startrek
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>svn co https://opensim4opencog.googlecode.com/sv
+/trunk-logicmoo/prolog/hyhtn bin/prolog/hyhtn
+'svn' is not recognized as an internal or external command,
+operable program or batch file.
+
+c:\development\opensim4opencog>xcopy /y /c bin-chatbot\?*.* bin\
+File not found - ?*.*
+0 File(s) copied
+Dont forget to: runprebuild.bat!
+
+c:\development\opensim4opencog>PAUSE
+Press any key to continue . . .
+[12:00:25 PM] Anne Ogborn: and you'll use Cogbot_VS9_ChatBot.sln
+[12:00:28 PM] Anne Ogborn: hmm... ok
+[12:00:36 PM] Anne Ogborn: you'll need some svn on your command line
+[12:00:45 PM] Anne Ogborn: hang on, let me find out what mine is
+[12:00:47 PM] Andrew Dougherty: I installed tortoise
+[12:00:49 PM] Andrew Dougherty: k
+[12:01:23 PM] Anne Ogborn: then you should have a command line one, you just need to add to your path
+[12:01:29 PM] Andrew Dougherty: ah
+[12:01:30 PM] Anne Ogborn: right click my computer
+[12:01:35 PM] Anne Ogborn: properties
+[12:01:39 PM] Anne Ogborn: advanced
+[12:01:46 PM] Anne Ogborn: environment variables
+[12:02:04 PM] Anne Ogborn: when I which I get
+[12:02:22 PM] Anne Ogborn: /cygdrive/c/Program Files (x86)/VisualSVN/bin/svn
+[12:02:29 PM] Anne Ogborn: so I'm picking it up from Cygwin
+[12:02:37 PM] Andrew Dougherty: should I isntall that?
+[12:02:47 PM] Anne Ogborn: Cygwin's a tool that gives more or less unix like environment on windows
+[12:02:48 PM] Andrew Dougherty: I'm totally cool with donig that
+[12:02:52 PM] Andrew Dougherty: yeah
+[12:02:54 PM] Anne Ogborn: I'd recommend it to you
+[12:02:56 PM] Andrew Dougherty: k
+[12:03:17 PM] Andrew Dougherty: I just didn't know if they'd come up with a newer thing to replace cygwin
+[12:03:24 PM] Anne Ogborn: no, still using it
+[12:03:50 PM] Anne Ogborn: if it's clanky but it works, clap yer hands! (clap clap)
+[12:04:21 PM] Anne Ogborn: if it's clanky but it works, clap yer hands! (clap clap)!
+[12:04:46 PM] Anne Ogborn: if it's clanky and we know it but it's better than without it
+[12:05:08 PM] Anne Ogborn: if it's clanky and we know it clap yer hands (clap clap)
+[12:05:10 PM] Anne Ogborn: 8cD
+[12:05:14 PM] Andrew Dougherty: hehe
+[12:05:39 PM] Andrew Dougherty: if it's clanky and we know it if it's clanky and we know it if it's clanky and we know it clap yer hands (clap clap ;)
+[12:05:47 PM] Andrew Dougherty: install "all"?
+[12:05:50 PM] Andrew Dougherty: fromt he select packages?
+[12:05:56 PM] Anne Ogborn: hmm....
+[12:06:01 PM] Anne Ogborn: that's a LOT of stuff
+[12:06:11 PM] Andrew Dougherty: anything in particular then
+[12:06:27 PM] Anne Ogborn: svn, normal dev stuff, curl, wget
+[12:06:44 PM] Andrew Dougherty: well I accidentally hit okay so it looks to be grabbing a fair bit
+[12:06:46 PM] Anne Ogborn: ok
+[12:06:58 PM] Anne Ogborn: IIRC 'all' isn't truly 'all'
+[12:07:21 PM] Anne Ogborn: so while that's happening
+[12:08:22 PM] Anne Ogborn: corn2.pone's more my thinking about structure
+[12:09:13 PM] Anne Ogborn: Douglas and I both thought Inform 7 might be a good model for this
+[12:09:26 PM] Anne Ogborn: its' an IDE for developing interactive fiction
+[12:09:33 PM] Andrew Dougherty: sounds good
+[12:10:12 PM] Anne Ogborn: and many real users of such systems won't be very technical, so a less techy feeling interface would be more approachable
+[12:10:28 PM] Anne Ogborn: and I like to make beautiful things
+[12:10:51 PM] Anne Ogborn: seems like you've been thinking about planners in much same way
+[12:10:57 PM] Anne Ogborn: ??
+[12:11:14 PM] Andrew Dougherty: yeah
+[12:11:29 PM] Andrew Dougherty: it would be nice to have an integrated and user friendly system to walk users through various tasks
+[12:11:50 PM] Andrew Dougherty: I wrote an interactive execution manager for one of my systems but the hard drive failed before it was backed up, d'oh
+[12:11:58 PM] Andrew Dougherty: s/manager/monitor/
+[12:12:38 PM] Anne Ogborn: I used to work closely with Apple's HIG.  I was the tech lead for Language Kit Group
+[12:12:55 PM] Anne Ogborn: So I appreciate good design.
+[12:13:03 PM] Andrew Dougherty: sweet!
+[12:13:21 PM] Andrew Dougherty: yeah my code is pretty buggy on average, always trying to do too much
+[12:13:28 PM] Anne Ogborn: =8cO
+[12:13:37 PM] Andrew Dougherty: but I'm working on improving that with the next release
+[12:14:14 PM] Anne Ogborn: Cogbot was real hackery when I came along. I've gotten them doing more testing/docs/etc
+[12:14:28 PM] Andrew Dougherty: good job
+[12:14:28 PM] Anne Ogborn: so it feels less like tail chasing and more like forward progress
+[12:15:07 PM] Anne Ogborn: the push to Sept 15 is so we can more or less 'close' the core of cogbot and work on more AI-ish stuff
+[12:18:21 PM] Anne Ogborn: so, what did you mean about making a less reactive planner?
